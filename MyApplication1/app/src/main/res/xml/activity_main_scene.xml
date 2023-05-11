@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+           <KeyPosition
+               motion:motionTarget="@+id/s"
+               motion:framePosition="61"
+               motion:keyPositionType="pathRelative"
+               motion:percentX="0.5"
+               motion:percentY="0.14" />
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/start"
+        motion:constraintSetStart="@id/end"
+        motion:duration="1000">
+
+        <KeyFrameSet>
+            <KeyPosition
+                motion:motionTarget="@+id/s"
+                motion:framePosition="53"
+                motion:keyPositionType="pathRelative"
+                motion:percentX="0.5"
+                motion:percentY="0.14" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@+id/s">
+            <Layout
+                android:layout_width="116dp"
+                android:layout_height="116dp"
+                motion:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>
